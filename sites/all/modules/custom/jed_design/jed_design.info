@@ -1,0 +1,4 @@
+name = JED Design
+description = Extend functionality for JED Design theme.
+package = Kopatheme
+core = 7.x

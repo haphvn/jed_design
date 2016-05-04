@@ -1,0 +1,13 @@
+diff --git a/plugins/content_types/webform_panels.inc b/plugins/content_types/webform_panels.inc
+index 05a0dd8..69263f1 100644
+--- a/plugins/content_types/webform_panels.inc
++++ b/plugins/content_types/webform_panels.inc
+@@ -182,7 +182,7 @@ function webform_panels_webform_panels_render($subtype, $conf, $panel_args, $con
+   if($access){
+ 
+     $render = node_view($node, $view_mode);
+-    $block->content .= render($render);
++    $block->content = render($render);
+   }
+ 
+   return $block;

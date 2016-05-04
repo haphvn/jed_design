@@ -1,0 +1,80 @@
+name = Jed Design
+description = It's a flexible & beautiful Jed Design theme.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = Navigation
+regions[header]         = Top Bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = Primary
+regions[sidebar_second] = Secondary
+regions[footer]         = Footer
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/font-awesome.css
+stylesheets[all][] = css/themify-icons.css
+stylesheets[all][] = css/elegant.css
+stylesheets[all][] = css/superfish.css
+stylesheets[all][] = css/owl.carousel.css
+stylesheets[all][] = css/owl.theme.css
+stylesheets[all][] = css/jquery.navgoco.css
+stylesheets[all][] = css/sb-search.css
+stylesheets[all][] = css/slider-pro.min.css
+stylesheets[all][] = css/magnific-popup.css
+stylesheets[all][] = css/jquery.mCustomScrollbar.css
+
+stylesheets[all][] = css/style.css
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = js/modernizr.custom.js
+
+scripts[] = js/jquery-1.11.1.min.js
+scripts[] = js/bootstrap.min.js
+scripts[] = js/classie.js
+scripts[] = js/uisearch.js
+scripts[] = js/superfish.js
+scripts[] = js/superclick.js
+scripts[] = js/jquery.sliderPro.min.js
+scripts[] = js/jquery.magnific-popup.min.js
+scripts[] = js/jquery.waypoints.js
+scripts[] = js/jquery.countTo.js
+scripts[] = js/imagesloaded.js
+scripts[] = js/masonry.pkgd.js
+scripts[] = js/jquery.matchHeight-min.js
+scripts[] = js/owl.carousel.js
+scripts[] = js/jquery.easing.1.3.js
+scripts[] = js/jquery.appear.js
+scripts[] = js/pro-bars.js
+
+scripts[] = js/gmaps.js
+scripts[] = js/jquery.form.min.js
+scripts[] = js/jquery.validate.min.js
+scripts[] = js/jquery.bootstrap-responsive-tabs.min.js
+scripts[] = js/jquery.mCustomScrollbar.concat.min.js
+scripts[] = js/jquery.fitvids.js
+scripts[] = js/custom.js
+
+; Panels layouts. You can place multiple layouts under the "layouts" folder.
+plugins[panels][layouts] = layouts
+
+; We provide default page manager pages for our site template.
+api[page_manager][pages_default][version] = 1
+api[page_manager][pages_default][path] = pages

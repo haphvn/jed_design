@@ -1,0 +1,86 @@
+<?php
+/**
+ * Created by haph on 2/15/16
+ */
+
+/**
+ * Implements hook_init().
+ */
+function jed_design_init()
+{
+    module_load_include('inc', 'jed_design', 'includes/common');
+    module_load_include('inc', 'jed_design', 'includes/content');
+    module_load_include('inc', 'jed_design', 'includes/model');
+    module_load_include('inc', 'jed_design', 'jed_design.block');
+    module_load_include('inc', 'jed_design', 'jed_design.form');
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function jed_design_form_alter(&$form, &$form_state, $form_id)
+{
+    if ($form_id == 'webform_client_form_1') {
+        $form['#attributes']['class'][] = 'comment-form';
+
+        $form['submitted']['name'] = array(
+            '#type' => 'textfield',
+            '#attributes' => array(
+                'class' => array('valid'),
+                'id' => array('comment_name'),
+                'placeholder' => array('Name*'),
+            ),
+            '#theme_wrappers' => array(),
+            '#prefix' => '<div class="form-wrap"><div class="form-col-1"><p class="input-block">',
+            '#suffix' => '</p></div>',
+        );
+
+        $form['submitted']['email_required'] = array(
+            '#type' => 'textfield',
+            '#attributes' => array(
+                'class' => array('valid'),
+                'id' => array('comment_email'),
+                'placeholder' => array('Email Required*'),
+            ),
+            '#theme_wrappers' => array(),
+            '#prefix' => '<div class="form-col-1"><p class="input-block">',
+            '#suffix' => '</p></div>',
+        );
+
+        $form['submitted']['website_url'] = array(
+            '#type' => 'textfield',
+            '#attributes' => array(
+                'class' => array('valid'),
+                'id' => array('comment_phone'),
+                'placeholder' => array('Website URL'),
+            ),
+            '#theme_wrappers' => array(),
+            '#prefix' => '<div class="form-col-1"><p class="input-block">',
+            '#suffix' => '</p></div></div>',
+        );
+
+        $form['submitted']['message'] = array(
+            '#type' => 'textarea',
+            '#cols' => 88,
+            '#rows' => 6,
+            '#attributes' => array(
+                'id' => array('comment_message'),
+                'placeholder' => array('Add your comment here...'),
+            ),
+            '#theme_wrappers' => array(),
+            '#prefix' => '<p class="textarea-block">',
+            '#suffix' => '</p>',
+        );
+
+        $form['actions']['submit'] = array(
+            '#type' => 'submit',
+            '#value' => t('Send'),
+            '#attributes' => array(
+                'id' => array('submit-comment'),
+                'class' => array('submit-comment-1'),
+            ),
+            '#prefix' => '<p class="comment-button input-block clearfix">',
+            '#suffix' => '</p>',
+        );
+    }
+}
